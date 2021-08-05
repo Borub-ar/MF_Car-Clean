@@ -1,14 +1,153 @@
+:root {
+    --white-elements: #fff;
+}
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
 }
 
-body {
+h1,
+h2,
+h3,
+p {
     padding: 0;
     margin: 0;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 0 2rem;
+    height: 4rem;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.822);
+    color: var(--white-elements);
+    backdrop-filter: blur(6px);
+}
+
+.navbar-inner {
+    position: absolute;
+    inset: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-item {
+    position: relative;
+    margin-left: 3rem;
+}
+
+.navigation-item::after {
+    content: '';
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    width: 0;
+    background-color: var(--white-elements);
+    height: 1px;
+    transition: width .2s ease-in-out;
+}
+
+.navigation-item:hover::after {
+    width: 100%;
+}
+
+.navigation-item a {
+    color: var(--white-elements);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center;
+    background-size: cover;
+}
+
+.hero-inner {
+    text-align: center;
+    padding: 3rem 0;
+    width: 70%;
+    border: 3px solid var(--white-elements);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 5rem;
+    text-shadow: 3px 3px 2px rgb(240, 169, 150);
+}
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.8rem 0;
+}
+
+.divider-line {
+    width: 12rem;
+    height: 2px;
+    background-color: var(--white-elements);
+}
+
+.car-icon {
+    color: var(--white-elements);
+    margin: 0 1rem;
+    font-size: 3rem;
+}
+
+.hero-btn {
+    background: transparent;
+    border: 2px solid var(--white-elements);
+    font-family: inherit;
+    cursor: pointer;
+    padding: .7rem 2rem;
+    color: var(--white-elements);
+    border-radius: .8rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: rgb(78, 17, 17);
 }
