@@ -35,20 +35,15 @@ body {
     top: 0;
     left: 0;
     z-index: 3;
+    display: flex;
     padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
     height: 4rem;
     width: 100%;
     background-color: rgba(26, 26, 26, 0.822);
     color: var(--white-elements);
     backdrop-filter: blur(6px);
-}
-
-.navbar-inner {
-    position: absolute;
-    inset: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .navigation {
@@ -92,12 +87,34 @@ body {
 
 
 .hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center;
+    background-color: black;
+
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
     background-size: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-one {
+    background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') center;
+    opacity: 0;
+}
+
+.slide-two {
+    background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center;
+    opacity: 0;
+}
+
+.slide-three {
+    background: url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center;
 }
 
 .hero-inner {
@@ -105,14 +122,15 @@ body {
     padding: 3rem 0;
     width: 70%;
     border: 3px solid var(--white-elements);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(12, 12, 12, 0.644);
+    backdrop-filter: blur(3px);
 }
 
 h1 {
     color: rgb(255, 255, 255);
-    font-weight: 400;
+    font-weight: 200;
     font-size: 5rem;
-    text-shadow: 3px 3px 2px rgb(240, 169, 150);
+    /* text-shadow: 2px 2px 2px rgb(255, 215, 205); */
 }
 
 .hero-divider {
