@@ -22,7 +22,37 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 
+@keyframes opacityChange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 
@@ -37,13 +67,13 @@ body {
     left: 0;
     z-index: 3;
     display: flex;
-    padding: 0 2rem;
+    padding: .1rem 2rem;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: rgba(26, 26, 26, 0.822);
     color: var(--white-elements);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -53,9 +83,9 @@ body {
 }
 
 .navbar-logo {
-    height: 5rem;
+    max-height: 3rem;
     margin-left: -2.5rem;
-    transition: max-height .3s linear;
+    /* transition: max-height .3s ease-in-out; */
 }
 
 .logo-text {
@@ -102,8 +132,6 @@ body {
 
 
 
-
-
 .hero {
     position: relative;
     display: flex;
@@ -121,17 +149,17 @@ body {
 }
 
 .slide-one {
-    background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') center;
+    background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') center no-repeat;
     opacity: 0;
 }
 
 .slide-two {
-    background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center;
+    background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center no-repeat;
     opacity: 0;
 }
 
 .slide-three {
-    background: url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center;
+    background: url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center no-repeat;
 }
 
 .hero-inner {
@@ -147,11 +175,17 @@ body {
     backdrop-filter: blur(3px);
 }
 
+.title-layer {
+    overflow: hidden;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
 h1 {
+    position: relative;
     color: rgb(255, 255, 255);
-    font-weight: 200;
-    font-size: 5rem;
-    /* text-shadow: 2px 2px 2px rgb(255, 187, 170); */
+    font-weight: 300;
+    animation: slideInRight 1.5s ease-in-out;
+    font-size: 4rem;
 }
 
 .hero-divider {
@@ -167,10 +201,19 @@ h1 {
     background-color: var(--white-elements);
 }
 
+.divider-line:first-of-type {
+    animation: slideInLeft 1.4s ease-in-out;
+}
+
+.divider-line:last-of-type {
+    animation: slideInRight 1.4s ease-in-out;
+}
+
 .car-icon {
     color: var(--white-elements);
     margin: 0 1rem;
     font-size: 3rem;
+    animation: opacityChange 2s ease-in-out;
 }
 
 .hero-text {
@@ -179,6 +222,7 @@ h1 {
     color: var(--white-elements);
     margin: 1.8rem 0;
     text-transform: uppercase;
+    animation: opacityChange 2s ease-in-out;
 }
 
 .hero-btn {
@@ -189,9 +233,9 @@ h1 {
     padding: .7rem 2rem;
     color: var(--white-elements);
     border-radius: .4rem;
-    font-size: 1.3rem;
     font-weight: 400;
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    animation: opacityChange 2s ease-in-out;
 }
 
 .hero-btn:hover {
@@ -204,20 +248,32 @@ h1 {
 
 
 
+.offer-section {
+    background-color: rgb(233, 233, 233);
+    padding: 3rem 0;
+}
+
+.offer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+.offer-inner-show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 h2 {
     margin-bottom: 1.4rem;    
     font-weight: 400;
     font-size: 1.7rem;
-}
-
-.offer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(233, 233, 233);
-    padding: 3rem 0;
+    color: rgb(46, 46, 46);
 }
 
 .offer-text {
@@ -225,3 +281,73 @@ h2 {
     text-align: center;
     line-height: 1.6;
 }
+
+
+
+
+
+
+
+
+
+
+
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: .3rem;
+    min-height: 18rem;
+    min-width: 25rem;
+    box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.63);
+    cursor: pointer;
+}
+
+.card:hover .card-blur {
+    transform: scaleX(.1%);
+}
+
+.card:hover .card-bg {
+    transform: scale(1.05);
+}
+
+.link-icon:hover .icon-icon {
+    transform: translateX(50%);
+}
+
+.card-blur {
+    overflow: hidden;
+    position: absolute;
+    inset: 0 70% 0 0;
+    backdrop-filter: blur(8px);
+    transform-origin: left;
+    transition: transform .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:nth-of-type(2) {
+    position: relative;
+    bottom: -2rem;
+}
+
+.card-bg {
+    width: 100%;
+    height: 100%;
+    background: url('../img/elements/hugo-b-oMqIt9JwkVs-unsplash.jpg') center no-repeat;
+    background-size: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.card-icon {
+    color: white;
+    font-size: 3.5rem;
+    transition: transform 1s ease-in-out;
+}
+
