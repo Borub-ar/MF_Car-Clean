@@ -2,8 +2,8 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import LocomotiveScroll from 'locomotive-scroll';
 
-// const navbarLogo = document.querySelector('.navbar-logo');
-// const hero = document.querySelector('.hero');
+const navbarLogo = document.querySelector('.navbar-logo');
+const hero = document.querySelector('.hero');
 const slides = document.querySelectorAll('.slide');
 const offerSecInner = document.querySelector('.offer-inner');
 
@@ -23,22 +23,22 @@ setInterval(() => {
     global.slideIndex++;
 
     if (global.slideIndex === 3) global.slideIndex = 0;
-}, 7000)
+}, 4000)
 
 
-// const shrinkNav = function(entries) {
-//     const [entry] = entries;
+const shrinkNav = function(entries) {
+    const [entry] = entries;
 
-//     if (entry.isIntersecting) navbarLogo.style.maxHeight = '4.4rem';
-//     else navbarLogo.style.maxHeight = '3rem';
-// }
+    if (entry.isIntersecting) navbarLogo.style.maxHeight = '4.4rem';
+    else navbarLogo.style.maxHeight = '3rem';
+}
 
-// const navObserver = new IntersectionObserver(shrinkNav, {
-//     root: null,
-//     threshold: 0.95
-// })
+const navObserver = new IntersectionObserver(shrinkNav, {
+    root: null,
+    threshold: 0.95
+})
 
-// navObserver.observe(hero)
+navObserver.observe(hero);
 
 const showSection = function(entries) {
     const [entry] = entries;
@@ -51,4 +51,4 @@ const sectionObserver = new IntersectionObserver(showSection, {
     threshold: 0.1
 })
 
-sectionObserver.observe(offerSecInner)
+sectionObserver.observe(offerSecInner);
