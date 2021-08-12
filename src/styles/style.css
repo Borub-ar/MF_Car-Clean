@@ -1,6 +1,9 @@
-@import url('../styles/locomotive-scroll.css');
+@import url('../styles//libraries/locomotive-scroll.css');
+@import url('./animations/animations.css');
 
 :root {
+    --select-color: #ffa7b3;
+    --main-color: #6a2d35;
     --white-elements: #fff;
     --section-background: #e9e9e9;
 }
@@ -26,40 +29,8 @@ body {
 }
 
 ::selection {
-    background-color: #ffa7b3;
+    background-color: var(--select-color);
     color: var(--white-elements);
-}
-
-@keyframes opacityChange {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
-@keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-70%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(70%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 
@@ -282,7 +253,7 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 1.4rem;    
+    margin-bottom: 1.4rem;
     font-weight: 400;
     font-size: 1.7rem;
     color: #2e2e2e;
@@ -294,6 +265,23 @@ h2 {
     margin-top: 3rem;
 }
 
+.card-wrapper {
+    position: relative;
+}
+
+.card-wrapper:nth-of-type(2) {
+    position: relative;
+    bottom: -2rem;
+}
+
+.card-title {
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .card {
     position: relative;
     overflow: hidden;
@@ -302,11 +290,6 @@ h2 {
     min-width: 25rem;
     box-shadow: 0px 0px 20px 0px #000000a1;
     cursor: pointer;
-}
-
-.card:nth-of-type(2) {
-    position: relative;
-    bottom: -2rem;
 }
 
 .card-blur {
@@ -338,7 +321,7 @@ h2 {
 
 .card-bg {
     width: 100%;
-    height: 100%;
+    min-height: 18rem;
     background: url('../img/elements/markus-spiske-MbG7kwWptII-unsplash.jpg') center no-repeat;
     background-size: cover;
     transition: transform .3s ease-in-out;
@@ -393,7 +376,7 @@ h2 {
 
 .cell-text {
     padding: 3rem;
-    background-color: #6a2d35;
+    background-color: var(--main-color);
 }
 
 .cell-subtxt {
@@ -437,7 +420,7 @@ h3 {
 
 
 .photo-section {
-    padding: 3rem 0 8rem;
+    padding: 3rem 0;
     background-color: var(--section-background);
 }
 
@@ -445,7 +428,7 @@ h3 {
     margin-top: 2rem;
     width: 70%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     justify-items: center;
     align-items: center;
@@ -457,3 +440,80 @@ h3 {
     border-radius: .5rem;
     border: 1px solid rgb(0, 0, 0);
 }
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--main-color) center no-repeat;
+    background-size: cover;
+    height: 95vh;
+    padding: 3rem 0 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.74);
+}
+
+.footer-header {
+    color: var(--white-elements);
+}
+
+.section-subtext.light {
+    color: #ffffff8f;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: 3rem 0 1.4rem;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: .2rem;
+    border: 1px solid rgba(255, 255, 255, 0.856);
+    height: 30rem;
+}
+
+
+
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.253);
+    color:  rgba(255, 255, 255, 0.623);
+    width: 90%;
+    height: 3rem;
+    margin-top: 3rem;
+    font-size: .6rem;
+}
+
+.credits a {
+    margin-left: .5rem;
+    color: white;
+}
+
+
+
+
