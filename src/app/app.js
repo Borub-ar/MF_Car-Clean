@@ -1,6 +1,10 @@
+'use strict';
+
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import LocomotiveScroll from 'locomotive-scroll';
+import PhotoSwipe from 'photoswipe';
+
 
 const navbarLogo = document.querySelector('.navbar-logo');
 const hero = document.querySelector('.hero');
