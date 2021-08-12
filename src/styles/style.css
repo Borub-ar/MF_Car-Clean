@@ -22,10 +22,34 @@ p {
     margin: 0;
 }
 
-body {
+body, html {
+    scroll-behavior: smooth;
     padding: 0;
     margin: 0;
     font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    color: var(--white-elements);
+    font-weight: 300;
+    animation: slideInRight 1.5s ease-in-out;
+    font-size: 4rem;
+}
+
+
+h2 {
+    margin-bottom: 1.4rem;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #2e2e2e;
 }
 
 ::selection {
@@ -59,8 +83,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #1a1a1ad2;
     color: var(--white-elements);
+    background-color: #1a1a1ad2;
     backdrop-filter: blur(8px);
 }
 
@@ -114,8 +138,21 @@ body {
     text-decoration: none;
 }
 
+/* .inner-nav-list {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: -800%;
+    transform: translateX(-50%);
+    list-style-type: none;
+}
 
-
+.inner-item {
+    text-align: center;
+    padding: .5rem 1rem;
+    background-color: #1a1a1ad2;
+    backdrop-filter: blur(8px);
+} */
 
 
 
@@ -168,13 +205,7 @@ body {
     animation: slideInLeft 1.5s ease-in-out;
 }
 
-h1 {
-    position: relative;
-    color: var(--white-elements);
-    font-weight: 300;
-    animation: slideInRight 1.5s ease-in-out;
-    font-size: 4rem;
-}
+
 
 .hero-divider {
     display: flex;
@@ -250,13 +281,6 @@ h1 {
 .offer-inner-show {
     opacity: 1;
     transform: translateY(0);
-}
-
-h2 {
-    margin-bottom: 1.4rem;
-    font-weight: 400;
-    font-size: 1.7rem;
-    color: #2e2e2e;
 }
 
 .cards-container {
@@ -455,9 +479,8 @@ footer {
     align-items: center;
     background: var(--main-color) center no-repeat;
     background-size: cover;
-    height: 95vh;
+    height: 90vh;
     padding: 3rem 0 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.74);
 }
 
 .footer-header {
@@ -472,7 +495,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 75%;
+    width: 65%;
     margin: 3rem 0 1.4rem;
 }
 
@@ -487,15 +510,39 @@ footer {
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    width: 80%;
-    border-radius: .2rem;
-    border: 1px solid rgba(255, 255, 255, 0.856);
+    align-items: center;
+    padding: 2rem;
+    width: 70%;
+    border: 2px solid rgba(255, 255, 255, 0.856);
     height: 30rem;
 }
 
+.form-title {
+    color: var(--white-elements);
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
 
+.form-subtitle {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.3rem 0 1rem;
+    gap: .5rem;
+    width: 100%;
+}
+
+.input-container input {
+    width: 25%;
+    height: 2rem;
+    border-radius: .5rem;
+    border: 2px solid black;
+}
 
 .credits {
     display: flex;
