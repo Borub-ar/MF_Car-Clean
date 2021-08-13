@@ -1,6 +1,6 @@
 const navbarLogo = document.querySelector('.navbar-logo');
 const hero = document.querySelector('.hero');
-const offerSection = document.querySelector('.offer-inner');
+const offerSectionInner = document.querySelector('.offer-inner');
 const aboutSection = document.querySelector('.about-section');
 const aboutCellText = document.querySelectorAll('.cell-text');
 
@@ -21,7 +21,7 @@ navObserver.observe(hero);
 const showFirstSection = function (entries) {
   const [entry] = entries;
 
-  if (entry.isIntersecting) offerSection.classList.add('offer-inner-show');
+  if (entry.isIntersecting) offerSectionInner.classList.add('offer-inner-show');
 };
 
 const firstSectionObserver = new IntersectionObserver(showFirstSection, {
@@ -29,7 +29,7 @@ const firstSectionObserver = new IntersectionObserver(showFirstSection, {
   threshold: 0.2,
 });
 
-firstSectionObserver.observe(offerSection);
+firstSectionObserver.observe(offerSectionInner);
 
 const showSecondSection = function (entries) {
   const [entry] = entries;
