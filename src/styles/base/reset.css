@@ -12,8 +12,13 @@ html {
   font-family: 'Spartan', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
+h3,
 p {
   padding: 0;
   margin: 0;
