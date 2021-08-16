@@ -2,8 +2,7 @@
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import LocomotiveScroll from 'locomotive-scroll';
-// import PhotoSwipe from 'photoswipe';
+// import LocomotiveScroll from 'locomotive-scroll';
 
 import './IntersectionObservers';
 
@@ -13,28 +12,82 @@ const contactTopbar = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
 const offerTopbar = document.querySelector('.offer-item');
 const offerSection = document.querySelector('.offer-section');
-const whyUsTopbar = document.querySelector('.why-us-item');
+const aboutTopbar = document.querySelector('.about-item');
 const aboutSection = document.querySelector('.about-section');
 const galleryTopbar = document.querySelector('.gallery-item');
 const gallerySection = document.querySelector('.gallery-section');
 const footer = document.querySelector('footer');
+const navigation = document.querySelector('.navbar');  
+const navToggleBtn = document.querySelector('.toggle-btn-wrap')
 
 const global = {
   slideIndex: 0,
 };
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true,
-});
 
-window.addEventListener('load', () => {
-  locoScroll.update();
-});
+const toggleNav = function() {
+  navigation.classList.toggle('show-navbar');
+} 
 
-// const init = function() {
+navToggleBtn.addEventListener('click', toggleNav)
 
-// }
+
+
+
+
+
+
+var pswpElement = document.querySelectorAll('.pswp')[0];
+
+// build items array
+var items = [
+    {
+        src: 'https://placekitten.com/600/400',
+        w: 600,
+        h: 400
+    },
+    {
+        src: 'https://placekitten.com/1200/900',
+        w: 1200,
+        h: 900
+    }
+];
+
+// define options (if needed)
+var options = {
+    // optionName: 'option value'
+    // for example:
+    index: 0 // start at first slide
+};
+
+// Initializes and opens PhotoSwipe
+var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+// gallery.init();
+
+
+
+
+
+
+
+
+
+
+
+// const locoScroll = new LocomotiveScroll({
+//   el: document.querySelector('[data-scroll-container]'),
+//   smooth: true,
+// });
+
+// window.addEventListener('load', () => {
+//   locoScroll.update();
+// });
+
+
+
+
+
+
 
 setInterval(() => {
   slides.forEach((e) => (e.style.opacity = 0));
@@ -59,7 +112,7 @@ offerTopbar.addEventListener('click', () =>
   })
 );
 
-whyUsTopbar.addEventListener('click', () =>
+aboutTopbar.addEventListener('click', () =>
   locoScroll.scrollTo(aboutSection, {
     offset: -50,
   })
