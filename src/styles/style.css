@@ -53,6 +53,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   margin-bottom: 1.4rem;
   font-weight: 400;
   font-size: 1.7rem;
@@ -193,6 +194,20 @@ h3 {
   opacity: 1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero {
   position: relative;
   display: flex;
@@ -210,7 +225,7 @@ h3 {
 }
 
 .slide-one {
-  background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') center no-repeat;
+  background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') top;
   opacity: 0;
 }
 
@@ -479,14 +494,16 @@ h3 {
 
 .photo-wrapper {
   overflow: hidden;
-  height: 10rem;
   width: 100%;
   border-radius: 0.5rem;
 }
+
 .photo {
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 120%;
   cursor: pointer;
+  transform: scale(1.1);
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -517,7 +534,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 65%;
+  width: 70%;
   margin: 3rem 0 1.4rem;
 }
 
@@ -543,7 +560,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  width: 70%;
+  width: 80%;
   border: 1px solid var(--main-color);
 }
 
@@ -555,6 +572,7 @@ footer {
 
 .form-subtitle {
   color: black;
+  text-align: center;
 }
 
 .input-container {
@@ -655,26 +673,49 @@ form textarea {
   transform: scaleX(100%);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1050px) {
+  .social-media {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .media {
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 850px) {
   .navbar {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
-    transition: opacity 2s;
+    visibility: hidden;
+    padding: 0;
   }
 
   .show-navbar {
-    display: block;
+    visibility: visible;
   }
 
   .toggle-btn-wrap {
     position: fixed;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
     top: 3rem;
     right: 3rem;
@@ -754,9 +795,50 @@ form textarea {
   .cell.bg-one {
     grid-row: 2/3;
   }
+
+  .photo-container {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .contact-form textarea {
+    width: 90%;
+  }
+
+  .input-container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .input-container input {
+    width: 90%;
+  }
 }
 
 @media (max-width: 750px) {
+  h1 {
+    font-size: clamp(1.2rem, 9vw, 3rem);
+  }
+
+  .hero-inner {
+    width: 90%;
+    height: 70%;
+  }
+
+  .hero-divider {
+    width: 95%;
+  }
+
+  .divider-line {
+    width: 30%;
+  }
+
   .section-subtext {
     width: 85%;
   }
@@ -773,3 +855,5 @@ form textarea {
     width: 90vw;
   }
 }
+
+
