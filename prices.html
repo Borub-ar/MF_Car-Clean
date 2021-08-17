@@ -10,12 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/styles/style.css" />
     <script src="https://kit.fontawesome.com/5789656d95.js" crossorigin="anonymous" defer></script>
-    <!-- <script src="./src/app/app.js" defer></script> -->
+    <script type="module" src="./src/app/pricesPage.js" defer></script>
   </head>
   <body>
-    <div class="toggle-btn-wrap">
-      <div class="nav-toggle-btn"></div>
-    </div>
+    <input type="checkbox" id="menu_checkbox">
+    <label class="nav-toggle-btn" for="menu_checkbox">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
 
     <nav class="navbar" data-scroll data-scroll-sticky data-scroll-target="#fixed">
       <div class="logo">
@@ -25,7 +28,7 @@
 
       <ul class="navigation">
         <li class="navigation-item"><a href="./index.html">STRONA GŁÓWNA</a></li>
-        <li class="navigation-item contact-item"><a href="#contact">KONTAKT</a></li>
+        <li class="navigation-item contact-item">KONTAKT</li>
       </ul>
     </nav>
 
