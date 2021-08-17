@@ -3,34 +3,47 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-import './IntersectionObservers';
+import './sectionObservers';
+import './common'
 
 const slides = document.querySelectorAll('.slide');
+
 const contactCard = document.querySelector('.card-contact');
-const contactTopbar = document.querySelector('.contact-item');
+const contactNavItem = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
 const footer = document.querySelector('footer');
-const navigation = document.querySelector('.navbar');  
-const navToggleBtn = document.querySelector('.toggle-btn-wrap');
 
-
-
-const offerTopbar = document.querySelector('.offer-item');
+const offerNavItem = document.querySelector('.offer-item');
 const offerSection = document.querySelector('.offer-section');
-const aboutTopbar = document.querySelector('.about-item');
+
+const aboutNavItem = document.querySelector('.about-item');
 const aboutSection = document.querySelector('.about-section');
-const galleryTopbar = document.querySelector('.gallery-item');
+
+const galleryNavItem = document.querySelector('.gallery-item');
 const gallerySection = document.querySelector('.gallery-section');
+
 
 const global = {
   slideIndex: 0,
 };
 
+[contactCard, contactBtn, contactNavItem].forEach(el => {
+  el.addEventListener('click', () => {
+    footer.scrollIntoView({ behavior: 'smooth' });
+  })
+})
 
+offerNavItem.addEventListener('click', () => {
+  offerSection.scrollIntoView({ behavior: 'smooth' });
+})
 
+aboutNavItem.addEventListener('click', () => {
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
+})
 
-
-
+galleryNavItem.addEventListener('click', () => {
+  gallerySection.scrollIntoView({ behavior: 'smooth' });
+})
 
 
 
@@ -76,9 +89,7 @@ const gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, option
 
 
 
-const toggleNav = function() {
-  navigation.classList.toggle('show-navbar');
-} 
+
 
 
 
@@ -93,13 +104,6 @@ setInterval(() => {
   if (global.slideIndex === 3) global.slideIndex = 0;
 }, 7000);
 
-navToggleBtn.addEventListener('click', toggleNav);
 
-[contactTopbar, contactBtn, contactCard].forEach((el) => {
-  el.addEventListener('click', () => {
-    locoScroll.scrollTo(footer, {
-      offset: -50,
-    });
-  });
-});
+
 

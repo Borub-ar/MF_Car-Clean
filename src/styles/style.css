@@ -156,6 +156,7 @@ h3 {
   position: relative;
   margin-left: 2rem;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .navigation-item::after {
@@ -348,7 +349,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(79, 79, 79, 0.35);
+  background-color: rgba(79, 79, 79, 0.63);
   transition: width 0.3s ease-in-out;
 }
 
@@ -424,6 +425,10 @@ h3 {
 .wash-details {
   line-height: 1.5;
   width: 70%;
+}
+
+.wash-details + .wash-details {
+  margin-top: 0.6rem;
 }
 
 .wash-info {
@@ -637,6 +642,7 @@ form textarea {
 
 .checkbox-container input[type='checkbox'] {
   margin-right: 1rem;
+  transform: scale(1.5);
 }
 
 .form-btn {
@@ -738,42 +744,115 @@ form textarea {
     visibility: visible;
   }
 
-  .toggle-btn-wrap {
-    position: fixed;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    top: 1.3rem;
-    right: 1.3rem;
-    cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  #menu_checkbox
+  {
+      display: none;
+  }
+  
+  .nav-toggle-btn
+  {
+    transform: scale(.7);
+      position: fixed;
+      top: 4rem;
+      right: 2rem;
+      z-index: 10;
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin:  -30px auto 0 auto;
+      cursor: pointer;
+  }
+  
+
+  .nav-toggle-btn div
+  {
+      position: relative;
+      top: 0;
+      height: 12px;
+      background-color: rgb(25, 154, 177);
+      margin-bottom: 12px;
+      transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+      border-radius: 2px;
+  }
+  
+  .nav-toggle-btn div:first-child
+  {
+      transform-origin: 0;
+  }
+  
+  .nav-toggle-btn div:last-child
+  {
+      margin-bottom: 0;
+      transform-origin: 60px;
+  }
+  
+  .nav-toggle-btn div:nth-child(2)
+  {
+      right: 0;
+      width: 60px;
+  }
+  
+  #menu_checkbox:checked + .nav-toggle-btn:before
+  {
+      background-color: #4caf50;
+  }
+  
+  #menu_checkbox:checked + .nav-toggle-btn div:first-child
+  {
+      top: -6px;
+      transform: rotateZ(45deg);
+  }
+  
+  #menu_checkbox:checked + .nav-toggle-btn div:last-child
+  {
+      top: 6px;
+      transform: rotateZ(45deg);
+  }
+  
+  #menu_checkbox:checked + .nav-toggle-btn div:nth-child(2)
+  {
+      width: 85px;
+      top: 0;
+      right: 13px;
+      transform: rotateZ(-45deg);
   }
 
-  .nav-toggle-btn {
-    width: 3rem;
-    height: 3px;
-    background-color: rgb(26, 128, 211);
-  }
 
-  .nav-toggle-btn::before,
-  .nav-toggle-btn::after {
-    content: '';
-    position: absolute;
-    width: 3rem;
-    height: 3px;
-    background-color: rgb(36, 134, 226);
-  }
 
-  .nav-toggle-btn::before {
-    top: 0.7rem;
-    left: 0;
-  }
 
-  .nav-toggle-btn::after {
-    bottom: 0.7rem;
-    left: 0;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .logo {
     flex-direction: column;
@@ -852,7 +931,7 @@ form textarea {
 
 @media (max-width: 750px) {
   h1 {
-    font-size: clamp(1.2rem, 8vw, 3rem);
+    font-size: clamp(1.2rem, 10vw, 3rem);
   }
 
   .hero-inner {
@@ -879,10 +958,6 @@ form textarea {
 
   .cards-container {
     flex-direction: column;
-  }
-
-  .card-wrapper:first-of-type {
-    margin-bottom: 2rem;
   }
 
   .card {
