@@ -24,11 +24,6 @@ const global = {
 };
 
 
-const toggleNav = function() {
-  navigation.classList.toggle('show-navbar');
-} 
-
-navToggleBtn.addEventListener('click', toggleNav)
 
 
 
@@ -41,7 +36,7 @@ const pswpElement = document.querySelectorAll('.pswp')[0];
 // build items array
 const items = [
     {
-        src: 'https://placekitten.com/600/400',
+        src: 'https://api.time.com/wp-content/uploads/2015/02/cats.jpg?quality=85&w=1024&h=512&crop=1',
         w: 600,
         h: 400
     },
@@ -77,6 +72,15 @@ const gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, option
 
 
 
+
+const toggleNav = function() {
+  navigation.classList.toggle('show-navbar');
+} 
+
+
+
+
+
 setInterval(() => {
   slides.forEach((e) => (e.style.opacity = 0));
   slides[global.slideIndex].style.opacity = 1;
@@ -85,6 +89,8 @@ setInterval(() => {
 
   if (global.slideIndex === 3) global.slideIndex = 0;
 }, 4000);
+
+navToggleBtn.addEventListener('click', toggleNav);
 
 [contactTopbar, contactBtn, contactCard].forEach((el) => {
   el.addEventListener('click', () => {
@@ -111,3 +117,4 @@ galleryTopbar.addEventListener('click', () =>
     offset: -50,
   })
 );
+

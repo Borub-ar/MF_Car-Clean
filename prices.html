@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MF CAR-CLEAN - Cennik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/prices.css" />
+    <script src="https://kit.fontawesome.com/5789656d95.js" crossorigin="anonymous" defer></script>
+    <!-- <script src="./src/app/app.js" defer></script> -->
+  </head>
+  <body>
+    <div class="toggle-btn-wrap">
+      <div class="nav-toggle-btn"></div>
+    </div>
+
+    <nav class="navbar" data-scroll data-scroll-sticky data-scroll-target="#fixed">
+      <div class="logo">
+        <a href="./index.html"><img class="navbar-logo" src="./src/img/elements/logo.png" alt="company logo" /></a>
+        <p class="logo-text">MF CAR - CLEAN</p>
+      </div>
+
+      <ul class="navigation">
+        <li class="navigation-item"><a href="./index.html">STRONA GŁÓWNA</a></li>
+        <li class="navigation-item contact-item"><a href="#contact">KONTAKT</a></li>
+      </ul>
+    </nav>
+
+    <header>
+
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer id="contact">
+      <h2 class="footer-header">KONTAKT</h2>
+      <p class="section-subtext light">Serdecznie zapraszamy do kontaktu przez formularz bądź telefonicznie!</p>
+
+      <div class="social-media">
+        <a href="tel:530551934">
+          <div class="media">
+            <i class="media-icon fas fa-phone-square"></i>
+            <p>530 551 934</p>
+          </div>
+        </a>
+
+        <a href="mailto: mfcarclean@gmail.com">
+          <div class="media">
+            <i class="media-icon fas fa-envelope"></i>
+            <p>mfcarclean@gmial.com</p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/50.1705472,20.9873258/Grunwaldzka+24,+33-200+D%C4%85browa+Tarnowska/@50.1746448,20.9809399,16.52z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x473d7eaddbfae3d5:0xeacd57f77e59aa53!2m2!1d20.9810194!2d50.1774526!3e0"
+          target="_blank"
+        >
+          <div class="media">
+            <i class="media-icon fas fa-map-marked-alt"></i>
+            <p>Jak dojechać?</p>
+          </div>
+        </a>
+
+        <a href="https://www.facebook.com/MF-Car-Clean-107202374989176" target="_blank">
+          <div class="media">
+            <i class="media-icon fab fa-facebook-square"></i>
+            <p>Facebook</p>
+          </div>
+        </a>
+      </div>
+
+      <form class="contact-form" action="https://formsubmit.co/mfcarclean@gmial.com" method="POST">
+        <p class="form-title">Masz pytanie?</p>
+        <p class="form-subtitle">Napisz je tutaj, a my się z Tobą skontaktujemy.</p>
+
+        <div class="input-container">
+          <label class="label-hidden" for="input-name">Enter your name</label>
+          <input type="text" name=Imię"" id="input-name" placeholder="Imię / Firma" required />
+
+          <label class="label-hidden" for="input-email">Enter your email</label>
+          <input type="email" name="Email" id="input-email" placeholder="Email" required />
+
+          <label class="label-hidden" for="input-tel">Enter your phone number</label>
+          <input type="tel" name="Numer Telefonu" id="input-tel" placeholder="Numer telefonu" required />
+        </div>
+
+        <label class="label-hidden" for="txtarea">Enter your message to us</label>
+        <textarea name="Wiadomość" id="txtarea" cols="50" rows="10" placeholder="Twoja wiadomość do nas."></textarea>
+
+        <div class="checkbox-container">
+          <input type="checkbox" name="Zgoda" id="checkbox" required />
+          <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych osobowych.</label>
+        </div>
+
+        <button class="form-btn">WYŚLIJ</button>
+      </form>
+      <p class="credits">
+        REAZLIZACJA STRONY:
+        <a class="footer-link" href="https://github.com/Borub-ar" target="_blank">KACPER BARABASZ</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -4,8 +4,8 @@
   "description": "",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.html prices.html",
+    "build": "parcel build index.html prices.html"
   },
   "author": "",
   "license": "ISC",
