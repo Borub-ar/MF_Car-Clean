@@ -186,13 +186,6 @@ h3 {
   background-color: #000000;
 }
 
-.hero.prices {
-  height: 80vh;
-  background: linear-gradient(#0c0c0c3b, #0c0c0c2a), url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
-  background-position-y: 85%;
-  background-size: cover;
-}
-
 .slide {
   position: absolute;
   inset: 0;
@@ -400,7 +393,6 @@ h3 {
   bottom: -1rem;
 }
 
-
 .card-title {
   position: absolute;
   font-size: 1.2rem;
@@ -409,16 +401,23 @@ h3 {
   transform: translateX(-50%);
 }
 
-
 .prices-section {
   padding: 4rem 1.5rem 3rem;
   background-color: var(--section-background);
 }
 
+.hero.prices {
+  height: 80vh;
+  background: linear-gradient(#0c0c0c3b, #0c0c0c2a),
+    url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
+  background-position-y: 85%;
+  background-size: cover;
+}
+
 .wash-type {
   font-weight: 700;
   font-size: 1.3rem;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
   color: rgba(0, 0, 0, 0.603);
 }
 
@@ -428,21 +427,9 @@ h3 {
 }
 
 .wash-info {
-  font-size: .7rem;
+  font-size: 0.7rem;
   margin-top: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .about-section {
   display: grid;
@@ -719,6 +706,22 @@ form textarea {
 }
 
 @media (max-width: 850px) {
+  .slide-one {
+    background-attachment: scroll;
+  }
+
+  .slide-two {
+    background-attachment: scroll;
+  }
+
+  .slide-three {
+    background-attachment: scroll;
+  }
+
+  .hero.prices {
+    background-attachment: scroll;
+  }
+
   .navbar {
     inset: 0;
     flex-direction: column;
