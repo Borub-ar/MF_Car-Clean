@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./node_modules/locomotive-scroll/dist/locomotive-scroll.min.css" />
     <link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css" />
     <link rel="stylesheet" href="./node_modules/photoswipe/dist/default-skin/default-skin.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
@@ -24,66 +23,66 @@
       <div class="nav-toggle-btn"></div>
     </div>
 
-    <!-- <div data-scroll-container id="fixed"> -->
-      <nav class="navbar" data-scroll data-scroll-sticky data-scroll-target="#fixed">
-        <div class="logo">
-          <a href="index.html"><img class="navbar-logo" src="./src/img/elements/logo.png" alt="company logo" /></a>
-          <p class="logo-text">MF CAR - CLEAN</p>
+    <nav class="navbar" data-scroll data-scroll-sticky data-scroll-target="#fixed">
+      <div class="logo">
+        <a href="index.html"><img class="navbar-logo" src="./src/img/elements/logo.png" alt="company logo" /></a>
+        <p class="logo-text">MF CAR - CLEAN</p>
+      </div>
+
+      <ul class="navigation">
+        <li class="navigation-item"><a href="#">CENNIK</a></li>
+        <li class="navigation-item offer-item"><a href="#offer">OFERTA</a></li>
+        <li class="navigation-item about-item"><a href="#about">O NAS</a></li>
+        <li class="navigation-item gallery-item"><a href="#gallery">GALERIA</a></li>
+        <li class="navigation-item contact-item"><a href="#contact">KONTAKT</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <div class="slide slide-one"></div>
+      <div class="slide slide-two"></div>
+      <div class="slide slide-three"></div>
+
+      <div class="hero-inner">
+        <div class="title-layer">
+          <h1>MF CAR-CLEAN</h1>
         </div>
 
-        <ul class="navigation">
-          <li class="navigation-item"><a href="#">CENNIK</a></li>
-          <li class="navigation-item offer-item"><a href="#">OFERTA</a></li>
-          <li class="navigation-item about-item"><a href="#">O NAS</a></li>
-          <li class="navigation-item gallery-item"><a href="#">GALERIA</a></li>
-          <li class="navigation-item contact-item"><a href="#">KONTAKT</a></li>
-        </ul>
-      </nav>
-
-      <header class="hero">
-        <div class="slide slide-one"></div>
-        <div class="slide slide-two"></div>
-        <div class="slide slide-three"></div>
-
-        <div class="hero-inner">
-          <div class="title-layer">
-            <h1>MF CAR-CLEAN</h1>
-          </div>
-
-          <div class="hero-divider">
-            <div class="divider-line"></div>
-            <i class="car-icon fas fa-car"></i>
-            <div class="divider-line"></div>
-          </div>
-          <p class="hero-text">Specjalizujemy się w profesjonalnym myciu aut wewnątrz jak i na zewnątrz.</p>
-          <button class="hero-btn">KONTAKT</button>
+        <div class="hero-divider">
+          <div class="divider-line"></div>
+          <i class="car-icon fas fa-car"></i>
+          <div class="divider-line"></div>
         </div>
-      </header>
+        <p class="hero-text">Specjalizujemy się w profesjonalnym myciu aut wewnątrz jak i na zewnątrz.</p>
+        <a href="#contact"><button class="hero-btn">KONTAKT</button></a>
+      </div>
+    </header>
 
-      <main>
-        <section class="offer-section" id="offer">
-          <div class="section-inner offer-inner">
-            <h2>OFERTA</h2>
-            <p class="section-subtext">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae modi totam vel tempora.
-              Asperiores hic, corporis quia perspiciatis nostrum non ut nulla assumenda architecto sint iusto dolore,
-              nam doloribus. Fugit a odio, aut magnam eligendi velit nihil ad amet eveniet cum quae dolores dolorum
-              laborum possimus cupiditate perferendis neque rerum impedit deleniti doloribus atque! Voluptatum qui ut
-              quod inventore et magnam incidunt explicabo repellat voluptatem amet tenetur, aspernatur ipsum, adipisci
-              iste placeat omnis neque ex necessitatibus natus, similique iure voluptas ipsam esse repellendus.
-            </p>
+    <main>
+      <section class="offer-section" id="offer">
+        <div class="section-inner offer-inner">
+          <h2>OFERTA</h2>
+          <p class="section-subtext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae modi totam vel tempora. Asperiores
+            hic, corporis quia perspiciatis nostrum non ut nulla assumenda architecto sint iusto dolore, nam doloribus.
+            Fugit a odio, aut magnam eligendi velit nihil ad amet eveniet cum quae dolores dolorum laborum possimus
+            cupiditate perferendis neque rerum impedit deleniti doloribus atque! Voluptatum qui ut quod inventore et
+            magnam incidunt explicabo repellat voluptatem amet tenetur, aspernatur ipsum, adipisci iste placeat omnis
+            neque ex necessitatibus natus, similique iure voluptas ipsam esse repellendus.
+          </p>
 
-            <div class="cards-container">
-              <div class="card-wrapper">
-                <div class="card">
-                  <div class="card-bg bg2"></div>
-                  <div class="card-blur">
-                    <i class="card-icon fas fa-hand-sparkles"></i>
-                  </div>
+          <div class="cards-container">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-bg bg2"></div>
+                <div class="card-blur">
+                  <i class="card-icon fas fa-hand-sparkles"></i>
                 </div>
-                <p class="card-title">CENNIK</p>
               </div>
+              <p class="card-title">CENNIK</p>
+            </div>
 
+            <a href="#contact">
               <div class="card-wrapper card-contact">
                 <div class="card">
                   <div class="card-bg bg3"></div>
@@ -93,245 +92,246 @@
                 </div>
                 <p class="card-title">KONTAKT</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="about-section">
-          <div class="cell bg-one"></div>
-
-          <div class="cell cell-text">
-            <h3>Dlaczego warto nam zaufać?</h3>
-            <p class="cell-inner-txt">
-              Przede wszystkim zależy nam na dokładności, dbamy o każdy szczegół, pracujemy z pasji, staramy się, aby
-              każdy klient wyjeżdżał zadowolony. Realizujemy każdy rodzaj zlecenia.
-            </p>
-            <div class="cell-subtxt">
-              <i class="cell-icon fas fa-user-shield"></i>
-              <p>Gwarancja realizacji wysokiej jakości usług.</p>
-            </div>
-            <div class="cell-subtxt">
-              <i class="cell-icon far fa-address-card"></i>
-              <p>Profesjonalizm, solidność wykonywanych usług.</p>
-            </div>
-          </div>
-
-          <div class="cell cell-text text-two">
-            <h3>Co nas wyróżnia?</h3>
-            <p class="cell-inner-txt">
-              Sukcesywnie rozwijamy swoje umiejętności. Zależy nam na satysfakcji i komforcie naszych Klientów, dlatego
-              korzystamy z najwyższej jakości środków czyszczących, które pozwalają nam usunąć każdy rodzaj zabrudzeń.
-            </p>
-
-            <div class="cell-subtxt">
-              <p>Wysoce konkurencyjne ceny</p>
-              <i class="cell-icon fas fa-wallet"></i>
-            </div>
-            <div class="cell-subtxt">
-              <p>Krótkie terminy wykonania</p>
-              <i class="cell-icon fas fa-tachometer-alt"></i>            </div>
-            <div class="cell-subtxt">
-              <p>Gwarancja zadowolenia klienta.</p>
-              <i class="cell-icon fas fa-thumbs-up"></i>
-            </div>
-          </div>
-
-          <div class="cell bg-two"></div>
-        </section>
-
-        <section class="gallery-section">
-          <div class="section-inner">
-            <h2>NASZE REALIZACJE</h2>
-            <p class="section-subtext">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero similique itaque nostrum. Facere, sequi
-              esse. Sed, illo commodi! Quis vero cum commodi eveniet quam magni saepe fugit sequi laboriosam!
-            </p>
-            <div class="photo-container">
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-              <div class="photo-wrapper">
-                <img
-                  class="photo"
-                  src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
-                  alt="Washed car photo"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer>
-          <h2 class="footer-header">KONTAKT</h2>
-          <p class="section-subtext light">Serdecznie zapraszamy do kontaktu przez formularz bądź telefonicznie!</p>
-
-          <div class="social-media">
-            <a href="tel:530551934">
-              <div class="media">
-                <i class="media-icon fas fa-phone-square"></i>
-                <p>530 551 934</p>
-              </div>
-            </a>
-
-            <a href="mailto: mfcarclean@gmail.com">
-              <div class="media">
-                <i class="media-icon fas fa-envelope"></i>
-                <p>mfcarclean@gmial.com</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.google.com/maps/dir/50.1705472,20.9873258/Grunwaldzka+24,+33-200+D%C4%85browa+Tarnowska/@50.1746448,20.9809399,16.52z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x473d7eaddbfae3d5:0xeacd57f77e59aa53!2m2!1d20.9810194!2d50.1774526!3e0"
-              target="_blank"
-            >
-              <div class="media">
-                <i class="media-icon fas fa-map-marked-alt"></i>
-                <p>Jak dojechać?</p>
-              </div>
-            </a>
-
-            <a href="https://www.facebook.com/MF-Car-Clean-107202374989176" target="_blank">
-              <div class="media">
-                <i class="media-icon fab fa-facebook-square"></i>
-                <p>Facebook</p>
-              </div>
             </a>
           </div>
+        </div>
+      </section>
 
-          <form class="contact-form" action="">
-            <p class="form-title">Masz pytanie?</p>
-            <p class="form-subtitle">Napisz je tutaj, a my się z Tobą skontaktujemy.</p>
+      <section class="about-section" id="about">
+        <div class="cell bg-one"></div>
 
-            <div class="input-container">
-              <label class="label-hidden" for="input-name">Enter your name</label>
-              <input type="text" name="" id="input-name" placeholder="Imię / Firma" />
-
-              <label class="label-hidden" for="input-email">Enter your email</label>
-              <input type="email" name="" id="input-email" placeholder="Email" />
-
-              <label class="label-hidden" for="input-tel">Enter your phone number</label>
-              <input type="tel" name="" id="input-tel" placeholder="Numer telefonu" />
-            </div>
-
-            <label class="label-hidden" for="txtarea">Enter your message to us</label>
-            <textarea name="" id="txtarea" cols="50" rows="10" placeholder="Twoja wiadomość do nas."></textarea>
-
-            <div class="checkbox-container">
-              <input type="checkbox" name="" id="checkbox" />
-              <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych osobowych.</label>
-            </div>
-
-            <button class="form-btn">WYŚLIJ</button>
-          </form>
-          <p class="credits">
-            REAZLIZACJA STRONY:
-            <a class="footer-link" href="https://github.com/Borub-ar" target="_blank">KACPER BARABASZ</a>
+        <div class="cell cell-text">
+          <h3>Dlaczego warto nam zaufać?</h3>
+          <p class="cell-inner-txt">
+            Przede wszystkim zależy nam na dokładności, dbamy o każdy szczegół, pracujemy z pasji, staramy się, aby
+            każdy klient wyjeżdżał zadowolony. Realizujemy każdy rodzaj zlecenia.
           </p>
-        </footer>
-      </main>
-    <!-- </div> -->
+          <div class="cell-subtxt">
+            <i class="cell-icon fas fa-user-shield"></i>
+            <p>Gwarancja realizacji wysokiej jakości usług.</p>
+          </div>
+          <div class="cell-subtxt">
+            <i class="cell-icon far fa-address-card"></i>
+            <p>Profesjonalizm, solidność wykonywanych usług.</p>
+          </div>
+        </div>
+
+        <div class="cell cell-text text-two">
+          <h3>Co nas wyróżnia?</h3>
+          <p class="cell-inner-txt">
+            Sukcesywnie rozwijamy swoje umiejętności. Zależy nam na satysfakcji i komforcie naszych Klientów, dlatego
+            korzystamy z najwyższej jakości środków czyszczących, które pozwalają nam usunąć każdy rodzaj zabrudzeń.
+          </p>
+
+          <div class="cell-subtxt">
+            <p>Wysoce konkurencyjne ceny</p>
+            <i class="cell-icon fas fa-wallet"></i>
+          </div>
+          <div class="cell-subtxt">
+            <p>Krótkie terminy wykonania</p>
+            <i class="cell-icon fas fa-tachometer-alt"></i>
+          </div>
+          <div class="cell-subtxt">
+            <p>Gwarancja zadowolenia klienta.</p>
+            <i class="cell-icon fas fa-thumbs-up"></i>
+          </div>
+        </div>
+
+        <div class="cell bg-two"></div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-inner">
+          <h2>NASZE REALIZACJE</h2>
+          <p class="section-subtext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero similique itaque nostrum. Facere, sequi
+            esse. Sed, illo commodi! Quis vero cum commodi eveniet quam magni saepe fugit sequi laboriosam!
+          </p>
+          <div class="photo-container">
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+            <div class="photo-wrapper">
+              <img
+                class="photo"
+                src="./src/img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg"
+                alt="Washed car photo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <h2 class="footer-header">KONTAKT</h2>
+        <p class="section-subtext light">Serdecznie zapraszamy do kontaktu przez formularz bądź telefonicznie!</p>
+
+        <div class="social-media">
+          <a href="tel:530551934">
+            <div class="media">
+              <i class="media-icon fas fa-phone-square"></i>
+              <p>530 551 934</p>
+            </div>
+          </a>
+
+          <a href="mailto: mfcarclean@gmail.com">
+            <div class="media">
+              <i class="media-icon fas fa-envelope"></i>
+              <p>mfcarclean@gmial.com</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.google.com/maps/dir/50.1705472,20.9873258/Grunwaldzka+24,+33-200+D%C4%85browa+Tarnowska/@50.1746448,20.9809399,16.52z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x473d7eaddbfae3d5:0xeacd57f77e59aa53!2m2!1d20.9810194!2d50.1774526!3e0"
+            target="_blank"
+          >
+            <div class="media">
+              <i class="media-icon fas fa-map-marked-alt"></i>
+              <p>Jak dojechać?</p>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/MF-Car-Clean-107202374989176" target="_blank">
+            <div class="media">
+              <i class="media-icon fab fa-facebook-square"></i>
+              <p>Facebook</p>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/kacper.barabasz@wp.pl" method="POST">
+          <p class="form-title">Masz pytanie?</p>
+          <p class="form-subtitle">Napisz je tutaj, a my się z Tobą skontaktujemy.</p>
+
+          <div class="input-container">
+            <label class="label-hidden" for="input-name">Enter your name</label>
+            <input type="text" name=Imię"" id="input-name" placeholder="Imię / Firma" required />
+
+            <label class="label-hidden" for="input-email">Enter your email</label>
+            <input type="email" name="Email" id="input-email" placeholder="Email" required />
+
+            <label class="label-hidden" for="input-tel">Enter your phone number</label>
+            <input type="tel" name="Numer Telefonu" id="input-tel" placeholder="Numer telefonu" required />
+          </div>
+
+          <label class="label-hidden" for="txtarea">Enter your message to us</label>
+          <textarea name="Wiadomość" id="txtarea" cols="50" rows="10" placeholder="Twoja wiadomość do nas."></textarea>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="Zgoda" id="checkbox" required />
+            <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych osobowych.</label>
+          </div>
+
+          <button class="form-btn">WYŚLIJ</button>
+        </form>
+        <p class="credits">
+          REAZLIZACJA STRONY:
+          <a class="footer-link" href="https://github.com/Borub-ar" target="_blank">KACPER BARABASZ</a>
+        </p>
+      </footer>
+    </main>
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

@@ -14,6 +14,7 @@
 
 body,
 html {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: 'Spartan', sans-serif;
@@ -194,20 +195,6 @@ h3 {
   opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero {
   position: relative;
   display: flex;
@@ -314,7 +301,7 @@ h3 {
 
 .offer-section {
   background-color: var(--section-background);
-  padding: 3rem 0 5rem;
+  padding: 4rem 0 5rem;
 }
 
 .offer-inner {
@@ -332,6 +319,10 @@ h3 {
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
+}
+
+.cards-container a {
+  color: black;
 }
 
 .card-wrapper {
@@ -478,7 +469,7 @@ h3 {
 }
 
 .gallery-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background-color: var(--section-background);
 }
 
@@ -518,7 +509,7 @@ footer {
   align-items: center;
   background: url('../img/backgrounds/footer.png') no-repeat;
   background-size: cover;
-  padding: 3rem 0 0;
+  padding: 4rem 0 0;
 }
 
 .footer-header {
@@ -673,18 +664,6 @@ form textarea {
   transform: scaleX(100%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1050px) {
   .social-media {
     flex-direction: column;
@@ -702,12 +681,15 @@ form textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     padding: 0;
+    transition: opacity .5s;
   }
 
   .show-navbar {
-    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
   }
 
   .toggle-btn-wrap {
@@ -717,8 +699,8 @@ form textarea {
     justify-content: center;
     align-items: center;
     height: 3rem;
-    top: 3rem;
-    right: 3rem;
+    top: 1.3rem;
+    right: 1.3rem;
     cursor: pointer;
   }
 
@@ -726,6 +708,7 @@ form textarea {
     width: 3rem;
     height: 3px;
     background-color: rgb(26, 128, 211);
+
   }
 
   .nav-toggle-btn::before,
@@ -823,12 +806,17 @@ form textarea {
 
 @media (max-width: 750px) {
   h1 {
-    font-size: clamp(1.2rem, 9vw, 3rem);
+    font-size: clamp(1.2rem, 8vw, 3rem);
   }
 
   .hero-inner {
+    padding: 0;
     width: 90%;
     height: 70%;
+  }
+
+  .hero-text {
+    font-size: 0.7rem;
   }
 
   .hero-divider {
@@ -854,6 +842,8 @@ form textarea {
   .card {
     width: 90vw;
   }
+
+  .credits {
+    font-size: 0.55rem;
+  }
 }
-
-
