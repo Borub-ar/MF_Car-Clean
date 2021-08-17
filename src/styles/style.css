@@ -51,6 +51,7 @@ h1 {
   font-weight: 300;
   animation: slideInRight 2s ease-in-out;
   font-size: 4rem;
+  text-shadow: 2px 2px 2px #696969;
 }
 
 h2 {
@@ -185,6 +186,13 @@ h3 {
   background-color: #000000;
 }
 
+.hero.prices {
+  height: 80vh;
+  background: linear-gradient(#0c0c0c3b, #0c0c0c2a), url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
+  background-position-y: 85%;
+  background-size: cover;
+}
+
 .slide {
   position: absolute;
   inset: 0;
@@ -192,17 +200,23 @@ h3 {
 }
 
 .slide-one {
-  background: url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') top no-repeat rgb(161, 161, 161);
+  background: linear-gradient(#0c0c0c69, #0c0c0c69),
+    url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') top no-repeat fixed;
+  background-size: cover;
   opacity: 0;
 }
 
 .slide-two {
-  background: url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center no-repeat rgb(161, 161, 161);
+  background: linear-gradient(#0c0c0c69, #0c0c0c69),
+    url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center no-repeat fixed;
+  background-size: cover;
   opacity: 0;
 }
 
 .slide-three {
-  background: url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center no-repeat rgb(161, 161, 161);
+  background: linear-gradient(#0c0c0c69, #0c0c0c69),
+    url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center no-repeat fixed;
+  background-size: cover;
 }
 
 .hero-inner {
@@ -212,11 +226,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 3rem 0;
-  width: 70%;
-  border: 3px solid var(--white-elements);
-  background-color: #0c0c0ca4;
-  backdrop-filter: blur(3px);
 }
 
 .title-layer {
@@ -297,7 +308,7 @@ h3 {
 }
 
 .open-h {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .open-h + .open-h {
@@ -323,20 +334,12 @@ h3 {
   position: relative;
 }
 
-.card-title {
-  position: absolute;
-  font-size: 1.2rem;
-  bottom: -2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .card {
   position: relative;
   overflow: hidden;
   border-radius: 0.3rem;
-  min-height: 18rem;
-  width: clamp(21rem, 36vw, 60rem);
+  min-height: 15rem;
+  width: clamp(21rem, 32vw, 60rem);
   box-shadow: 0px 0px 20px 0px #000000a1;
   cursor: pointer;
 }
@@ -396,6 +399,50 @@ h3 {
   position: absolute;
   bottom: -1rem;
 }
+
+
+.card-title {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.prices-section {
+  padding: 4rem 1.5rem 3rem;
+  background-color: var(--section-background);
+}
+
+.wash-type {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: .8rem 0;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.wash-details {
+  line-height: 1.5;
+  width: 70%;
+}
+
+.wash-info {
+  font-size: .7rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .about-section {
   display: grid;
@@ -519,6 +566,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 70rem;
   width: 70%;
   margin: 3rem 0 1.4rem;
 }
@@ -546,6 +594,7 @@ footer {
   align-items: center;
   padding: 2rem;
   width: 80%;
+  max-width: 75rem;
   border: 1px solid var(--main-color);
 }
 

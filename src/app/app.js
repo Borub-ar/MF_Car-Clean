@@ -9,15 +9,18 @@ const slides = document.querySelectorAll('.slide');
 const contactCard = document.querySelector('.card-contact');
 const contactTopbar = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
+const footer = document.querySelector('footer');
+const navigation = document.querySelector('.navbar');  
+const navToggleBtn = document.querySelector('.toggle-btn-wrap');
+
+
+
 const offerTopbar = document.querySelector('.offer-item');
 const offerSection = document.querySelector('.offer-section');
 const aboutTopbar = document.querySelector('.about-item');
 const aboutSection = document.querySelector('.about-section');
 const galleryTopbar = document.querySelector('.gallery-item');
 const gallerySection = document.querySelector('.gallery-section');
-const footer = document.querySelector('footer');
-const navigation = document.querySelector('.navbar');  
-const navToggleBtn = document.querySelector('.toggle-btn-wrap')
 
 const global = {
   slideIndex: 0,
@@ -88,7 +91,7 @@ setInterval(() => {
   global.slideIndex++;
 
   if (global.slideIndex === 3) global.slideIndex = 0;
-}, 4000);
+}, 7000);
 
 navToggleBtn.addEventListener('click', toggleNav);
 
@@ -99,22 +102,4 @@ navToggleBtn.addEventListener('click', toggleNav);
     });
   });
 });
-
-offerTopbar.addEventListener('click', () =>
-  locoScroll.scrollTo(offerSection, {
-    offset: -50,
-  })
-);
-
-aboutTopbar.addEventListener('click', () =>
-  locoScroll.scrollTo(aboutSection, {
-    offset: -50,
-  })
-);
-
-galleryTopbar.addEventListener('click', () =>
-  locoScroll.scrollTo(gallerySection, {
-    offset: -50,
-  })
-);
 
