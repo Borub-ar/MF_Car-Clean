@@ -4,19 +4,20 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 import { uncheckToggleMenu, hideNavbar } from './common';
-import './sectionsObservers';
 
 const slides = document.querySelectorAll('.slide');
 const contactCard = document.querySelector('.card-contact');
 const contactNavItem = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
-const footer = document.querySelector('footer');
 const offerNavItem = document.querySelector('.offer-item');
 const offerSection = document.querySelector('.offer-section');
+const offerSectionInner = document.querySelector('.offer-inner');
 const aboutNavItem = document.querySelector('.about-item');
 const aboutSection = document.querySelector('.about-section');
+const aboutCellText = document.querySelectorAll('.cell-text');
 const galleryNavItem = document.querySelector('.gallery-item');
-const gallerySection = document.querySelector('.gallery-section');
+const gallerySection = document.getElementById('gallery');
+const gallerySectionInner = document.querySelector('.gallery-inner');
 
 const global = {
   slideIndex: 0,
@@ -58,6 +59,77 @@ galleryNavItem.addEventListener('click', () => {
 });
 
 const pswpElement = document.querySelectorAll('.pswp')[0];
+
+const showOffer = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) offerSectionInner.classList.add('section-in-view');
+};
+
+const offerSectionObs = new IntersectionObserver(showOffer, {
+  root: null,
+  threshold: 0.15,
+});
+
+offerSectionObs.observe(offerSectionInner);
+
+const aboutSectionFirst = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    aboutCellText[0].children.forEach((el) => el.classList.add('section-in-view'));
+  }
+};
+
+const aboutFirstHalfObs = new IntersectionObserver(aboutSectionFirst, {
+  root: null,
+  threshold: 0.15,
+});
+
+aboutFirstHalfObs.observe(aboutCellText[0]);
+
+const aboutSectionSecond = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    aboutCellText[1].children.forEach((el) => el.classList.add('section-in-view'));
+  }
+};
+
+const aboutSecondHalfObs = new IntersectionObserver(aboutSectionSecond, {
+  root: null,
+  threshold: 0.2,
+});
+
+aboutSecondHalfObs.observe(aboutCellText[1]);
+
+const showGallery = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    gallerySectionInner.classList.add('section-in-view');
+  }
+};
+
+const galleryObs = new IntersectionObserver(showGallery, {
+  root: null,
+  threshold: 0.2,
+});
+
+galleryObs.observe(gallerySection);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // build items array
 const items = [
