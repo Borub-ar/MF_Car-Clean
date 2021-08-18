@@ -49,7 +49,7 @@ h1 {
   position: relative;
   color: var(--white-elements);
   font-weight: 300;
-  animation: slideInRight 2s ease-in-out;
+  animation: slideInRight 1.5s ease-in-out;
   font-size: 4rem;
   text-shadow: 2px 2px 2px #696969;
 }
@@ -226,7 +226,7 @@ h3 {
 
 .title-layer {
   overflow: hidden;
-  animation: slideInLeft 2s ease-in-out;
+  animation: slideInLeft 1.5s ease-in-out;
 }
 
 .hero-divider {
@@ -302,6 +302,8 @@ h3 {
 }
 
 .open-h {
+  text-align: center;
+  width: 95%;
   margin-bottom: 0.8rem;
 }
 
@@ -422,13 +424,26 @@ h3 {
   color: rgba(0, 0, 0, 0.603);
 }
 
-.wash-details {
-  line-height: 1.5;
-  width: 70%;
+.wash-list {
+  margin: 1.6rem 0;
 }
 
-.wash-details + .wash-details {
-  margin-top: 0.6rem;
+.wash-list > li {
+  padding-left: .6rem;
+  margin: .3rem 0;
+}
+
+.wash-list > li::marker {
+  font-weight: 700;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f101';
+  color: #e09b40;
+}
+
+.wash-list:not(.wash-list:last-of-type) > li:last-of-type,
+.wash-list span {
+  color: #000000a9;
+  font-weight: 700;
 }
 
 .wash-info {
@@ -489,6 +504,7 @@ h3 {
 }
 
 .cell-icon {
+  width: 50px;
   font-size: 2.5rem;
 }
 
@@ -642,7 +658,7 @@ form textarea {
 
 .checkbox-container input[type='checkbox'] {
   margin-right: 1rem;
-  transform: scale(1.5);
+  transform: scale(1.7);
 }
 
 .form-btn {
@@ -651,7 +667,7 @@ form textarea {
   font-family: inherit;
   border: 1px solid var(--main-color);
   font-size: 0.8rem;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(241, 241, 241);
   color: var(--main-color);
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s;
@@ -744,115 +760,67 @@ form textarea {
     visibility: visible;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  #menu_checkbox
-  {
-      display: none;
-  }
-  
-  .nav-toggle-btn
-  {
-    transform: scale(.7);
-      position: fixed;
-      top: 4rem;
-      right: 2rem;
-      z-index: 10;
-      display: block;
-      width: 60px;
-      height: 60px;
-      margin:  -30px auto 0 auto;
-      cursor: pointer;
-  }
-  
-
-  .nav-toggle-btn div
-  {
-      position: relative;
-      top: 0;
-      height: 12px;
-      background-color: rgb(25, 154, 177);
-      margin-bottom: 12px;
-      transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
-      border-radius: 2px;
-  }
-  
-  .nav-toggle-btn div:first-child
-  {
-      transform-origin: 0;
-  }
-  
-  .nav-toggle-btn div:last-child
-  {
-      margin-bottom: 0;
-      transform-origin: 60px;
-  }
-  
-  .nav-toggle-btn div:nth-child(2)
-  {
-      right: 0;
-      width: 60px;
-  }
-  
-  #menu_checkbox:checked + .nav-toggle-btn:before
-  {
-      background-color: #4caf50;
-  }
-  
-  #menu_checkbox:checked + .nav-toggle-btn div:first-child
-  {
-      top: -6px;
-      transform: rotateZ(45deg);
-  }
-  
-  #menu_checkbox:checked + .nav-toggle-btn div:last-child
-  {
-      top: 6px;
-      transform: rotateZ(45deg);
-  }
-  
-  #menu_checkbox:checked + .nav-toggle-btn div:nth-child(2)
-  {
-      width: 85px;
-      top: 0;
-      right: 13px;
-      transform: rotateZ(-45deg);
+  #menu-checkbox {
+    display: none;
   }
 
+  .nav-toggle-btn {
+    position: fixed;
+    top: 4rem;
+    right: 2rem;
+    z-index: 10;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: -30px auto 0 auto;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
 
+  .nav-toggle-btn div {
+    position: relative;
+    top: 0;
+    height: 12px;
+    background-color: rgb(81, 173, 235);
+    margin-bottom: 12px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    border-radius: 8px;
+  }
 
+  .nav-toggle-btn div:first-child {
+    transform-origin: 0;
+  }
 
+  .nav-toggle-btn div:last-child {
+    margin-bottom: 0;
+    transform-origin: 60px;
+  }
 
+  .nav-toggle-btn div:nth-child(2) {
+    right: 0;
+    width: 60px;
+  }
 
+  #menu-checkbox:checked + .nav-toggle-btn:before {
+    background-color: #4caf50;
+  }
 
+  #menu-checkbox:checked + .nav-toggle-btn div:first-child {
+    top: -6px;
+    transform: rotateZ(45deg);
+  }
 
+  #menu-checkbox:checked + .nav-toggle-btn div:last-child {
+    top: 6px;
+    transform: rotateZ(45deg);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  #menu-checkbox:checked + .nav-toggle-btn div:nth-child(2) {
+    width: 85px;
+    top: 0;
+    right: 13px;
+    transform: rotateZ(-45deg);
+  }
 
   .logo {
     flex-direction: column;
@@ -876,7 +844,7 @@ form textarea {
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0.432);
   }
