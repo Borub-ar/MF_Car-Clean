@@ -3,6 +3,8 @@ const hero = document.querySelector('.hero');
 const navigation = document.querySelector('.navbar');
 const navToggleBtn = document.querySelector('.nav-toggle-btn');
 const toggleMenuCheckbox = document.getElementById('menu-checkbox');
+const footer = document.querySelector('footer');
+
 
 export const uncheckToggleMenu = function () {
   toggleMenuCheckbox.checked = false;
@@ -30,3 +32,22 @@ const navObserver = new IntersectionObserver(shrinkNav, {
 
 navObserver.observe(hero);
 navToggleBtn.addEventListener('click', toggleNav);
+
+
+
+
+
+const showFooter = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    footer.children.forEach((el) => el.classList.add('section-in-view'));
+  }
+};
+
+const footerObs = new IntersectionObserver(showFooter, {
+  root: null,
+  threshold: 0.2,
+});
+
+footerObs.observe(footer);
