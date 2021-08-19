@@ -2,11 +2,12 @@
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import Lightbox from 'lightbox2';
 
 import { uncheckToggleMenu, hideNavbar } from './common';
 
 const slides = document.querySelectorAll('.slide');
-const contactCard = document.querySelector('.card-contact');
+const contactCard = document.querySelector('[data-contactCard]');
 const contactNavItem = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
 const offerNavItem = document.querySelector('.offer-item');
@@ -18,10 +19,19 @@ const aboutCellText = document.querySelectorAll('.cell-text');
 const galleryNavItem = document.querySelector('.gallery-item');
 const gallerySection = document.getElementById('gallery');
 const gallerySectionInner = document.querySelector('.gallery-inner');
+const footer = document.querySelector('footer');
 
 const global = {
   slideIndex: 0,
 };
+
+Lightbox.option({
+  resizeDuration: 200,
+  disableScrolling: true,
+  wrapAround: true,
+  positionFromTop: 100,
+  alwaysShowNavOnTouchDevices: true,
+});
 
 setInterval(() => {
   slides.forEach((e) => (e.style.opacity = 0));
@@ -117,41 +127,3 @@ const galleryObs = new IntersectionObserver(showGallery, {
 });
 
 galleryObs.observe(gallerySection);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// build items array
-const items = [
-  {
-    src: 'https://api.time.com/wp-content/uploads/2015/02/cats.jpg?quality=85&w=1024&h=512&crop=1',
-    w: 600,
-    h: 400,
-  },
-  {
-    src: 'https://placekitten.com/1200/900',
-    w: 1200,
-    h: 900,
-  },
-];
-
-// define options (if needed)
-const options = {
-  // optionName: 'option value'
-  // for example:
-  index: 0, // start at first slide
-};
-
-// Initializes and opens PhotoSwipe
-const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-// gallery.init();
