@@ -7,7 +7,7 @@ import { uncheckToggleMenu, hideNavbar } from './common';
 
 const contactNavItem = document.querySelector('.contact-item');
 const footer = document.querySelector('footer');
-const pricesSection = document.querySelector('.prices-section')
+const pricesSection = document.querySelector('.prices-section');
 
 contactNavItem.addEventListener('click', () => {
   footer.scrollIntoView({ behavior: 'smooth' });
@@ -15,14 +15,11 @@ contactNavItem.addEventListener('click', () => {
   uncheckToggleMenu();
 });
 
-
-
 const showPrices = function (entries) {
   const [entry] = entries;
 
   if (entry.isIntersecting) {
-    // gallerySectionInner.classList.add('section-in-view');
-    pricesSection.children.forEach(el => el.classList.add('section-in-view'))
+    pricesSection.children.forEach((el) => el.classList.add('section-in-view'));
   }
 };
 

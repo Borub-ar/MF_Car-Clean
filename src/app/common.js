@@ -5,7 +5,6 @@ const navToggleBtn = document.querySelector('.nav-toggle-btn');
 const toggleMenuCheckbox = document.getElementById('menu-checkbox');
 const footer = document.querySelector('footer');
 
-
 export const uncheckToggleMenu = function () {
   toggleMenuCheckbox.checked = false;
 };
@@ -17,25 +16,6 @@ export const hideNavbar = function () {
 const toggleNav = function () {
   navigation.classList.toggle('show-navbar');
 };
-
-const shrinkNav = function (entries) {
-  const [entry] = entries;
-
-  if (entry.isIntersecting) navbarLogo.style.maxHeight = '4.4rem';
-  else navbarLogo.style.maxHeight = '3rem';
-};
-
-const navObserver = new IntersectionObserver(shrinkNav, {
-  root: null,
-  threshold: 0.95,
-});
-
-navObserver.observe(hero);
-navToggleBtn.addEventListener('click', toggleNav);
-
-
-
-
 
 const showFooter = function (entries) {
   const [entry] = entries;
@@ -51,3 +31,24 @@ const footerObs = new IntersectionObserver(showFooter, {
 });
 
 footerObs.observe(footer);
+
+const shrinkNav = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) navbarLogo.style.maxHeight = '4.4rem';
+  else navbarLogo.style.maxHeight = '3rem';
+};
+
+const navObserver = new IntersectionObserver(shrinkNav, {
+  root: null,
+  threshold: 0.95,
+});
+
+navObserver.observe(hero);
+
+navToggleBtn.addEventListener('click', toggleNav);
+
+navigation.addEventListener('click', () => {
+  hideNavbar();
+  uncheckToggleMenu();
+});
