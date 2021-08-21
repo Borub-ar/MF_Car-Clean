@@ -49,9 +49,9 @@ h1 {
   position: relative;
   color: var(--white-elements);
   font-weight: 300;
-  animation: slideInRight 1.5s ease-in-out;
   font-size: 4rem;
   text-shadow: 2px 2px 2px #696969;
+  animation: slideInRight 1.5s ease-in-out;
 }
 
 h2 {
@@ -99,6 +99,25 @@ h3 {
   }
 }
 
+@keyframes pointDown {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(50%);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(50%);
+  }
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* //////////// Utilities */
 .section-inner {
   overflow: hidden;
@@ -109,7 +128,7 @@ h3 {
 }
 
 .section-subtext {
-  width: 60%;
+  width: 55%;
   text-align: center;
   line-height: 1.6;
 }
@@ -133,6 +152,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo a {
+  color: var(--white-elements);
 }
 
 .navbar-logo {
@@ -188,6 +211,14 @@ h3 {
   background-color: #000000;
 }
 
+.hero.prices {
+  height: 80vh;
+  background: linear-gradient(#0c0c0c3b, #0c0c0c2a),
+    url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
+  background-position-y: 85%;
+  background-size: cover;
+}
+
 .slide {
   position: absolute;
   inset: 0;
@@ -203,7 +234,7 @@ h3 {
 
 .slide-two {
   background: linear-gradient(#0c0c0c69, #0c0c0c69),
-    url('../img/backgrounds/artiom-vallat-BTLYDyrFefk-unsplash.jpg') center no-repeat fixed;
+    url('../img/backgrounds/brock-wegner-pWGUMQS.jpg') center no-repeat fixed;
   background-size: cover;
   opacity: 0;
 }
@@ -237,6 +268,10 @@ h3 {
   margin-top: 1.8rem;
 }
 
+.hero-divider.prices {
+  margin: 1.8rem 0;
+}
+
 .divider-line {
   width: 12rem;
   height: 2px;
@@ -260,6 +295,7 @@ h3 {
 
 .hero-text {
   width: 70%;
+  font-size: 1.2rem;
   line-height: 1.4;
   color: var(--white-elements);
   margin: 1.8rem 0;
@@ -285,6 +321,23 @@ h3 {
   color: #4e1111;
 }
 
+.pointer-container {
+ position: absolute;
+  bottom: 4rem;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-pointer {
+  font-size: 3.2rem;
+  color: var(--white-elements);
+  cursor: pointer;
+  animation: pointDown 2.5s infinite both, opacityChange 2.5s;
+}
+
 .offer-section {
   background-color: var(--section-background);
   padding: 4rem 0 3rem;
@@ -297,7 +350,7 @@ h3 {
 }
 
 .open-hours {
-  margin: 1rem 0;
+  margin: 2.4rem 0 1rem;
   font-size: 1;
   font-weight: 700;
 }
@@ -315,7 +368,7 @@ h3 {
 .cards-container {
   display: flex;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .cards-container a {
@@ -323,6 +376,7 @@ h3 {
 }
 
 .card-wrapper {
+  cursor: pointer;
   min-height: 20rem;
   position: relative;
 }
@@ -364,21 +418,20 @@ h3 {
   transform: translateX(150%);
 }
 
+.card-wrapper:hover .card-title {
+  transform: translate(-50%, -0.3rem);
+}
+
 .card-bg {
   width: 100%;
   min-height: 18rem;
-  background: url('../img/elements/markus-spiske-MbG7kwWptII-unsplash.jpg') center no-repeat;
+  background: url('../img/thumbnails/clay-banks-31l-8hY1mt4-unsplash.jpg') center no-repeat;
   background-size: cover;
   transition: transform 0.3s ease-in-out;
 }
 
 .card-bg.bg2 {
-  background: url('../img/elements/grafis-gosulsel-6VaoBRYhle8-unsplash.jpg') center no-repeat;
-  background-size: cover;
-}
-
-.card-bg.bg3 {
-  background: url('../img/elements/andre-taissin-5OUMf1Mr5pU-unsplash.jpg') center no-repeat;
+  background: url('../img/thumbnails/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg') center no-repeat;
   background-size: cover;
 }
 
@@ -399,14 +452,7 @@ h3 {
   bottom: 0;
   font-size: 1.2rem;
   transform: translateX(-50%);
-}
-
-.hero.prices {
-  height: 80vh;
-  background: linear-gradient(#0c0c0c3b, #0c0c0c2a),
-    url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
-  background-position-y: 85%;
-  background-size: cover;
+  transition: transform 0.3s;
 }
 
 .prices-section {
@@ -465,12 +511,12 @@ h3 {
 }
 
 .cell.bg-one {
-  background: url('../img/elements/erik-mclean-Vy2kaSObSOk-unsplash.jpg') center no-repeat;
+  background: url('../img/elements/colton-sturgeon-1ScqCRoNvfA-unsplash.jpg') center no-repeat;
   background-size: cover;
 }
 
 .cell.bg-two {
-  background: url('../img/elements/christian-koch-D_4R9CcYZOk.jpg') center no-repeat;
+  background: url('../img/elements/jenny-ueberberg-PEjIzb2bhAk-unsplash.jpg') center no-repeat;
   background-size: cover;
 }
 
@@ -507,7 +553,7 @@ h3 {
 }
 
 .cell-icon {
-  width: 50px;
+  width: 60px;
   font-size: 2.5rem;
 }
 
@@ -539,7 +585,7 @@ h3 {
   width: 70%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 1.4rem;
   justify-items: center;
   align-items: center;
 }
@@ -547,13 +593,13 @@ h3 {
 .photo-wrapper {
   overflow: hidden;
   width: 100%;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   transition: width 0.5s ease-in-out;
 }
 
 .photo {
   width: 100%;
-  height: 100%;
+  height: auto;
   cursor: pointer;
   transform: scale(1.1);
   transition: filter 1.5s, transform 0.3s ease-in-out;
@@ -585,10 +631,6 @@ footer > * {
   margin-bottom: 0.5rem;
 }
 
-.section-subtext.light {
-  color: black;
-}
-
 .social-media {
   display: flex;
   align-items: center;
@@ -602,11 +644,11 @@ footer > * {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   color: var(--main-color);
 }
 
 .media-icon {
+  margin-right: 1rem;
   transition: transform 0.3s;
 }
 
@@ -677,7 +719,7 @@ form textarea {
 
 .checkbox-container input[type='checkbox'] {
   margin-right: 1rem;
-  transform: scale(1.7);
+  transform: scale(1.4);
 }
 
 .form-btn {
@@ -747,6 +789,10 @@ form textarea {
 }
 
 @media (max-width: 850px) {
+  .hero.prices {
+    height: 100vh;
+  }
+
   .slide-one {
     background-attachment: scroll;
   }
@@ -761,6 +807,10 @@ form textarea {
 
   .hero.prices {
     background-attachment: scroll;
+  }
+
+  .pointer-container {
+    display: none;
   }
 
   .navbar {
@@ -914,6 +964,10 @@ form textarea {
   .input-container input {
     width: 90%;
   }
+
+  input[type="email"] {
+    margin: .3rem;
+  }
 }
 
 @media (max-width: 750px) {
@@ -993,9 +1047,5 @@ form textarea {
 
   .car-icon {
     font-size: 2.3rem;
-  }
-
-  .hero-text {
-    font-size: 0.7rem;
   }
 }
