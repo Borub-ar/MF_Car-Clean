@@ -7,6 +7,7 @@ import Lightbox from 'lightbox2';
 import { uncheckToggleMenu, hideNavbar } from './common';
 
 const slides = document.querySelectorAll('.slide');
+const heroPointer = document.querySelector('.hero-pointer');
 const contactCard = document.querySelector('[data-contactCard]');
 const contactNavItem = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
@@ -41,6 +42,12 @@ setInterval(() => {
 
   if (global.slideIndex === 3) global.slideIndex = 0;
 }, 7000);
+
+heroPointer.addEventListener('click', () => {
+  offerSection.scrollIntoView({ behavior: 'smooth' });
+  hideNavbar();
+  uncheckToggleMenu();
+});
 
 [contactCard, contactBtn, contactNavItem].forEach((el) => {
   el.addEventListener('click', () => {
