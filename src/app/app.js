@@ -11,14 +11,11 @@ const heroPointer = document.querySelector('.hero-pointer');
 const contactCard = document.querySelector('[data-contactCard]');
 const contactNavItem = document.querySelector('.contact-item');
 const contactBtn = document.querySelector('.hero-btn');
-const offerNavItem = document.querySelector('.offer-item');
+const navigation = document.querySelector('.navigation');
 const offerSection = document.querySelector('.offer-section');
 const offerSectionInner = document.querySelector('.offer-inner');
-const aboutNavItem = document.querySelector('.about-item');
-const aboutSection = document.querySelector('.about-section');
 const aboutCellText = document.querySelectorAll('.cell-text');
-const galleryNavItem = document.querySelector('.gallery-item');
-const gallerySection = document.getElementById('gallery');
+const gallerySection = document.querySelector('.gallery-section');
 const gallerySectionInner = document.querySelector('.gallery-inner');
 const footer = document.querySelector('footer');
 
@@ -35,7 +32,7 @@ Lightbox.option({
 });
 
 setInterval(() => {
-  slides.forEach((e) => (e.style.opacity = 0));
+  slides.forEach(e => (e.style.opacity = 0));
   slides[global.slideIndex].style.opacity = 1;
 
   global.slideIndex++;
@@ -49,7 +46,7 @@ heroPointer.addEventListener('click', () => {
   uncheckToggleMenu();
 });
 
-[contactCard, contactBtn, contactNavItem].forEach((el) => {
+[contactCard, contactBtn, contactNavItem].forEach(el => {
   el.addEventListener('click', () => {
     footer.scrollIntoView({ behavior: 'smooth' });
     hideNavbar();
@@ -57,25 +54,15 @@ heroPointer.addEventListener('click', () => {
   });
 });
 
-offerNavItem.addEventListener('click', () => {
-  offerSection.scrollIntoView({ behavior: 'smooth' });
-  hideNavbar();
-  uncheckToggleMenu();
+navigation.addEventListener('click', e => {
+  if (e.target.classList.contains('nav-scroll')) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    hideNavbar();
+    uncheckToggleMenu();
+  }
 });
-
-aboutNavItem.addEventListener('click', () => {
-  aboutSection.scrollIntoView({ behavior: 'smooth' });
-  hideNavbar();
-  uncheckToggleMenu();
-});
-
-galleryNavItem.addEventListener('click', () => {
-  gallerySection.scrollIntoView({ behavior: 'smooth' });
-  hideNavbar();
-  uncheckToggleMenu();
-});
-
-const pswpElement = document.querySelectorAll('.pswp')[0];
 
 const showOffer = function (entries) {
   const [entry] = entries;
@@ -94,7 +81,7 @@ const aboutSectionFirst = function (entries) {
   const [entry] = entries;
 
   if (entry.isIntersecting) {
-    aboutCellText[0].children.forEach((el) => el.classList.add('section-in-view'));
+    aboutCellText[0].children.forEach(el => el.classList.add('section-in-view'));
   }
 };
 
@@ -109,7 +96,7 @@ const aboutSectionSecond = function (entries) {
   const [entry] = entries;
 
   if (entry.isIntersecting) {
-    aboutCellText[1].children.forEach((el) => el.classList.add('section-in-view'));
+    aboutCellText[1].children.forEach(el => el.classList.add('section-in-view'));
   }
 };
 

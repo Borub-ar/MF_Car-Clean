@@ -21,7 +21,7 @@ const showFooter = function (entries) {
   const [entry] = entries;
 
   if (entry.isIntersecting) {
-    footer.children.forEach((el) => el.classList.add('section-in-view'));
+    footer.children.forEach(el => el.classList.add('section-in-view'));
   }
 };
 
