@@ -19,7 +19,7 @@ const showPrices = function (entries) {
   const [entry] = entries;
 
   if (entry.isIntersecting) {
-    pricesSection.children.forEach((el) => el.classList.add('section-in-view'));
+    pricesSection.children.forEach(el => el.classList.add('section-in-view'));
   }
 };
 
