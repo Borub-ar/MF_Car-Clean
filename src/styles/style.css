@@ -14,12 +14,12 @@
 
 body,
 html {
-  scrollbar-width: thin;
+    scrollbar-width: thin;
   scrollbar-color: #51adeb #4d4d4d;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 html::-webkit-scrollbar {
@@ -207,7 +207,7 @@ h3 {
 }
 
 .navigation-item::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.3rem;
   left: 0;
@@ -237,7 +237,8 @@ h3 {
 .hero.prices {
   height: 80vh;
   background: linear-gradient(#0c0c0c3b, #0c0c0c2a),
-    url('../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg') center no-repeat fixed;
+    url("../img/backgrounds/giorgio-trovato-gBF0CCP_Qy0-unsplash.jpg") center
+      no-repeat fixed;
   background-position-y: 85%;
   background-size: cover;
 }
@@ -250,21 +251,22 @@ h3 {
 
 .slide-one {
   background: linear-gradient(#0c0c0c69, #0c0c0c69),
-    url('../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg') top no-repeat fixed;
+    url("../img/backgrounds/mason-jones-9e_ssIz4jB4-unsplash.jpg") top no-repeat
+      fixed;
   background-size: cover;
   opacity: 0;
 }
 
 .slide-two {
   background: linear-gradient(#0c0c0c69, #0c0c0c69),
-    url('../img/backgrounds/brock-wegner-pWGUMQS.jpg') center no-repeat fixed;
+    url("../img/backgrounds/brock-wegner-pWGUMQS.jpg") center no-repeat fixed;
   background-size: cover;
   opacity: 0;
 }
 
 .slide-three {
   background: linear-gradient(#0c0c0c69, #0c0c0c69),
-    url('../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg') center no-repeat fixed;
+    url("../img/backgrounds/pavel-keyzik-WvXh5EVm.jpg") center no-repeat fixed;
   background-size: cover;
 }
 
@@ -448,13 +450,15 @@ h3 {
 .card-bg {
   width: 100%;
   min-height: 18rem;
-  background: url('../img/thumbnails/clay-banks-31l-8hY1mt4-unsplash.jpg') center no-repeat;
+  background: url("../img/thumbnails/clay-banks-31l-8hY1mt4-unsplash.jpg")
+    center no-repeat;
   background-size: cover;
   transition: transform 0.3s ease-in-out;
 }
 
 .card-bg.bg2 {
-  background: url('../img/thumbnails/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg') center no-repeat;
+  background: url("../img/thumbnails/julian-hochgesang-Dkn8-zPIbwo-unsplash.jpg")
+    center no-repeat;
   background-size: cover;
 }
 
@@ -507,8 +511,8 @@ h3 {
 
 .wash-list > li::marker {
   font-weight: 700;
-  font-family: 'Font Awesome 5 Free';
-  content: '\f101';
+  font-family: "Font Awesome 5 Free";
+  content: "\f101";
   color: #e09b40;
 }
 
@@ -534,12 +538,14 @@ h3 {
 }
 
 .cell.bg-one {
-  background: url('../img/elements/colton-sturgeon-1ScqCRoNvfA-unsplash.jpg') center no-repeat;
+  background: url("../img/elements/colton-sturgeon-1ScqCRoNvfA-unsplash.jpg")
+    center no-repeat;
   background-size: cover;
 }
 
 .cell.bg-two {
-  background: url('../img/elements/jenny-ueberberg-PEjIzb2bhAk-unsplash.jpg') center no-repeat;
+  background: url("../img/elements/jenny-ueberberg-PEjIzb2bhAk-unsplash.jpg")
+    center no-repeat;
   background-size: cover;
 }
 
@@ -639,7 +645,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('../img/backgrounds/footer.png') no-repeat;
+  background: url("../img/backgrounds/footer.png") no-repeat;
   background-size: cover;
   padding: 4rem 0 0;
 }
@@ -729,7 +735,7 @@ form textarea {
 }
 
 ::placeholder {
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   color: var(--main-color);
 }
 
@@ -741,7 +747,7 @@ form textarea {
   margin: 1.4rem 0;
 }
 
-.checkbox-container input[type='checkbox'] {
+.checkbox-container input[type="checkbox"] {
   margin-right: 1rem;
   transform: scale(1.4);
 }
@@ -783,7 +789,7 @@ form textarea {
 }
 
 .footer-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.2rem;
   height: 1px;
@@ -872,7 +878,8 @@ form textarea {
     height: 12px;
     background-color: #51adeb;
     margin-bottom: 12px;
-    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+      0.3s ease right;
     border-radius: 8px;
   }
 
@@ -985,7 +992,7 @@ form textarea {
     width: 90%;
   }
 
-  input[type='email'] {
+  input[type="email"] {
     margin: 0.3rem;
   }
 }
